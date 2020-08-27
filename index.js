@@ -7,7 +7,6 @@ form.addEventListener('submit', () => {
   event.preventDefault();
   const apiKey = 'ddbbd54b9f4c98a6a21e81b415f73948';
   const inputValue = input.value.trim();
-  
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
   
   fetch(url)
@@ -15,13 +14,7 @@ form.addEventListener('submit', () => {
     return response.json();
   })
   .then((data) => {
-    console.log(data);
-    // const { main, name, sys, weather } = data;
     const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-
-    console.log(data.coord.lat);
-    console.log(data.coord.lon);
-    console.log(data.weather[0].icon);
 
     const output = `
       <div class="search-item">
@@ -39,7 +32,7 @@ form.addEventListener('submit', () => {
     weatherOutput.innerHTML = output;
   })
   .catch(() => {
-    errorMessage.innerText = "Please search for a valid city 😩";
+    errorMessage.innerText = 'Please search for a valid city 😩';
   });
 
   errorMessage.innerText = '';
