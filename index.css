@@ -18,32 +18,15 @@ body {
   border-radius: 0.5em;
 }
 
-.form>button {
-  border: unset;
-  border-radius: 0.5em;
-  height: 2em;
-  font-weight: bold;
-  padding: 0.2em 1em;
-  cursor: pointer;
-}
-
-.form>button:active {
-  transform: translateY(4px);
-}
-
-.form>button:hover {
-  background-color: #008000;
-  color: #fff;
-}
-
 .search-item {
   background-color: #dde0e2d5;
   width: fit-content;
   margin: auto;
   height: 22em;
-  padding: 0.5em 2em 0.5em 2em;
+  padding: 0.5em 2em 1em 2em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
   border-radius: 0.5em;
+  margin-bottom: 5em;
 }
 
 .search-item>h2 sup {
@@ -67,8 +50,7 @@ body {
   font-weight: bold;
 }
 
-@media screen and (max-width: 375px) {	
-  .form>button {
-    margin: 0.5em 16em 0em 0em;
-  }
+.error-message {
+  color: #ff0000f6;
+  font-weight: bold;
 }
