@@ -20,9 +20,9 @@ body {
 
 .search-item {
   background-color: #dde0e2d5;
-  width: fit-content;
+  width: 13em;
   margin: auto;
-  height: 22em;
+  height: 24em;
   padding: 0.5em 2em 1em 2em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
   border-radius: 0.5em;
@@ -53,4 +53,58 @@ body {
 .error-message {
   color: #ff0000f6;
   font-weight: bold;
+}
+
+.weather-output {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#delete-button {
+  color: red;
+  margin-left: 13em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border: unset;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+#delete-button:active {
+  transform: translateY(4px);
+}
+
+.form>button {
+  border: unset;
+  border-radius: 0.5em;
+  height: 2em;
+  font-weight: bold;
+  padding: 0.2em 1em;
+  cursor: pointer;
+}
+
+.form>button:active {
+  transform: translateY(4px);
+}
+
+.form>button:hover,
+#delete-button:hover {
+  background-color: #008000;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {	
+  .weather-output {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 425px) {	
+  .form>button {
+    margin: 0.5em 16em 0em 0em;
+  }
+
+  .weather-output {
+    display: block;
+  }
 }
